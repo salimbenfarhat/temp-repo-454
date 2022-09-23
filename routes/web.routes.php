@@ -18,18 +18,11 @@ require_once(ROOT_DIR.'/app/controllers/FrontendController.php');
 $FC = new FrontendController();
 
 // map home
-//$router->map('GET', '/', $FC->home(), 'FrontendController');
-$router->map('GET', '/', function() {
-    require_once(VIEW.'/pages/frontend/home.view.php');
-});
+$router->map('GET', '/', [$FC, 'home'], 'home');
 // map about
-$router->map('GET', '/about', function() {
-    require_once(VIEW.'/pages/frontend/about.view.php');
-});
+$router->map('GET', '/about', [$FC, 'about'], 'about');
 // map contact
-$router->map('GET', '/contact', function() {
-    require_once(VIEW.'/pages/frontend/contact.view.php');
-});
+$router->map('GET', '/contact', [$FC, 'contact'], 'contact');
 
 // match current request url
 $match = $router->match();

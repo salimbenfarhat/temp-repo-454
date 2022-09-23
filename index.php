@@ -10,8 +10,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Define ROOT constant
+// Define ROOT & VIEW constants
 define('ROOT_DIR', dirname(__DIR__));
+define('VIEW', ROOT_DIR.'/app/views');
+
 // Loading Router
 require_once(ROOT_DIR.'/libs/vendors/AltoRouter/AltoRouter.php');
 $router = new AltoRouter();
