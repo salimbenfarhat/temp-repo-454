@@ -6,15 +6,30 @@
  */
 
 require_once(ROOT_DIR.'/app/controllers/Controller.php');
+
 class FrontendController extends Controller {
-	public function home() {
-        require_once(VIEW.'/pages/frontend/home.view.php');
+
+    public function home() {
+        $meta = array(
+            'title' => 'Accueil',
+            'description' => 'blah blah'
+        );
+        FrontendController::globalVars()['view']::render('pages.frontend.home', 'default', compact(FrontendController::globalVars(), 'meta'));
     }
     public function about() {
-        require_once(VIEW.'/pages/frontend/about.view.php');
+        $meta = array(
+            'title' => 'A Propos',
+            'description' => 'blah blah'
+        );
+        FrontendController::globalVars()['view']::render('pages.frontend.about', 'default', compact(FrontendController::globalVars(), 'meta'));
     }
     public function contact() {
-        require_once(VIEW.'/pages/frontend/contact.view.php');
+        $meta = array(
+            'title' => 'Contact',
+            'description' => 'blah blah'
+        );
+        FrontendController::globalVars()['view']::render('pages.frontend.contact', 'default', compact(FrontendController::globalVars(), 'meta'));
     }
+    
 }
 ?>
