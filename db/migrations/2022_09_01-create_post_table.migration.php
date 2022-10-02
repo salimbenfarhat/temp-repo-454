@@ -27,10 +27,10 @@ try {
 	$db::callInstance()::exec('ALTER TABLE POST
 		ADD CONSTRAINT POST_USER FOREIGN KEY (USER_ID) REFERENCES USER (ID);
 		COMMIT');
-	echo "<blockquote style='background: lightgreen;'><pre style='color:green'>Création de la table <b>POST</b> (si existante) : <b>OK</b></pre>";
+	echo "<pre style='color:green'>Liaison table <b>USER</b> / <b>POST</b> : <b>OK</b></pre>";
 } catch(PDOException $e) {
 	$db::setMessage($e->getMessage());
-	echo "<blockquote style='background: lightsalmon;'><pre style='color:red'>Création de la table <b>POST</b> (si existante) : <b>KO</b></pre>";
+	echo "<pre style='color:red'>Liaison table <b>USER</b> / <b>POST</b> : <b>KO</b></pre>";
 }
 
 // Insert one row to POST table

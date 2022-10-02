@@ -31,8 +31,8 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && isset($_POST['authDataba
         $alert::message("Chargement des migrations", "info");
         require_once(__DIR__ . '/migrations/2022_09_01-drop_all_tables.migration.php');
         require_once(__DIR__ . '/migrations/2022_09_01-create_test_table.migration.php');
-        require_once(__DIR__ . '/migrations/2022_09_01-create_test2_table.migration.php');
-        require_once(__DIR__ . '/migrations/2022_09_01-create_test3_table.migration.php');
+        require_once(__DIR__ . '/migrations/2022_09_01-create_user_table.migration.php');
+        require_once(__DIR__ . '/migrations/2022_09_01-create_post_table.migration.php');
         echo "<a href='exit.php' tite='Logout'>Logout</a>";
       exit();
    } else {
