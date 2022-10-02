@@ -11,5 +11,8 @@ define('PASSWORD', 'TEST');
 // GENERATE THE KEY WITH TOOL LIKE THIS :
 // https://onlinerandomtools.com/generate-random-string
 // Don't forget to change the key below
-define('KEY', 'LjxKnsM7ajpyun6qLoBCVYnRFGZsrl2L');
+/*
+ * NOT USED FOR THE MOMENT
+ define('KEY', 'LjxKnsM7ajpyun6qLoBCVYnRFGZsrl2L');
+ */
 ?>
