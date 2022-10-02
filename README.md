@@ -7,11 +7,11 @@ I am building my own customized Framework (Work In Progress) called SBFramework.
 
 ## To Do :
 
-**- Build feature to remove Cookie after logout** 
+~~**- Build feature to destroy Session after logout**~~ 
 
 **- On the refresh page create button to clean db after be logged in**
 
-**- Create MCD/SQL for only one user who add posts** 
+~~**- Create MCD/SQL for only one user who add posts**~~
 
 **- Create Fake data library or import faker library**
 
