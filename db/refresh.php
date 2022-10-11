@@ -15,6 +15,9 @@ require_once(__DIR__ . '/../libs/Alert.Lib.php');
 $alert = new Alert();
 // Add boolean session var for auth
 $_SESSION['auth'] = false;
+// Loading Faker
+require_once(__DIR__ . '/../libs/vendors/Faker/autoload.php');
+$faker = Faker\Factory::create();
 
 // Authentication form processing
 if(strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && isset($_POST['authDatabaseCleaner'])) {
@@ -29,10 +32,18 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && isset($_POST['authDataba
       $alert::message("<h3>Accès authorisé !</h3>", "success");
       // Loading All Migrations
         $alert::message("Chargement des migrations", "info");
+        // DROP ALL TABLES
         require_once(__DIR__ . '/migrations/2022_09_01-drop_all_tables.migration.php');
+        // CREATE TEST TABLE
         require_once(__DIR__ . '/migrations/2022_09_01-create_test_table.migration.php');
+        // CREATE USER TABLE
         require_once(__DIR__ . '/migrations/2022_09_01-create_user_table.migration.php');
+        // CREATE POST TABLE
         require_once(__DIR__ . '/migrations/2022_09_01-create_post_table.migration.php');
+        // LOADING SEEDERS
+        require_once(__DIR__ . '/seeders/Seeders.php');
+
+        
         echo "<a href='exit.php' tite='Logout'>Logout</a>";
       exit();
    } else {

@@ -13,9 +13,9 @@ I am building my own customized Framework (Work In Progress) called SBFramework.
 
 ~~**- Create MCD/SQL for only one user who add posts**~~
 
-**- Create Fake data library or import faker library**
+~~**- Create Fake data library or import faker library**~~
 
-**- Create factories and seeders for users/posts**
+~~**- Create factories and seeders for users/posts**~~
 
 **- Create Session Class on the framework repo**
 
