@@ -6,25 +6,26 @@
  */
 
 class Alert { 
-    
-    public static function message($value, $type = null) {
+
+    public static function message($value, $tag, $type = null) {
         switch($type) {
             case 'success' :
-                echo "<pre style='color:green'>" . $value . '</pre>';
+                $message = "<{$tag} style='color:green'>{$value}</{$tag}>";
                 break;
             case 'info' :
-                echo "<pre style='color:blue'>" . $value . '</pre>';
+                $message = "<{$tag} style='color:blue'>{$value}</{$tag}>";
                 break;
             case 'warning' :
-                echo "<pre style='color:orange'>" . $value . '</pre>';
+                $message = "<{$tag} style='color:orange'>{$value}</{$tag}>";
                 break;
             case 'danger' :
-                echo "<pre style='color:red'>" . $value . '</pre>';
+                $message = "<{$tag} style='color:red'>{$value}</{$tag}>";
                 break;
             case 'default' :
-                echo "<pre style='color:black'>" . $value . '</pre>';
+                $message = "<{$tag} style='color:black'>{$value}</{$tag}>";
                 break;
         }
+        return $message;
     }
 
 }
