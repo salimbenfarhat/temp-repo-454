@@ -19,8 +19,14 @@ $FC = new FrontendController();
 
 // map home
 $router->map('GET', '/', [$FC, 'home'], 'home');
+
 // map about
 $router->map('GET', '/about', [$FC, 'about'], 'about');
+
+// map auth
+$router->map('GET', '/auth/login', [$FC, 'login'], 'login');
+$router->map('GET', '/auth/signup', [$FC, 'signup'], 'signup');
+
 // map contact
 $router->map('GET', '/contact', [$FC, 'contact'], 'contact');
 
