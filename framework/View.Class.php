@@ -7,6 +7,15 @@
 
 class View {   		
     
+    private static $path;
+
+    public static function getPath() {
+        return View::$path;
+    }
+    public static function setPath($path) {
+        View::$path = $path;
+    }
+
     public static function render($view, $template = null,  $variables = null) {
         $path = str_replace('\\', '/', VIEW . '/');
         ob_start();
