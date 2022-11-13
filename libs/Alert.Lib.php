@@ -21,7 +21,7 @@ class Alert {
             case 'danger' :
                 $message = "<{$tag} style='color:red'>{$value}</{$tag}>";
                 break;
-            case 'default' :
+            default :
                 $message = "<{$tag} style='color:black'>{$value}</{$tag}>";
                 break;
         }
