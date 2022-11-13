@@ -18,10 +18,4 @@ require_once(ROOT_DIR.'/libs/vendors/AltoRouter/AltoRouter.php');
 $router = new AltoRouter();
 // Loading Routes file
 require_once(ROOT_DIR.'/routes/web.routes.php');
-
-// Loading Faker
-require_once(ROOT_DIR.'/libs/vendors/Faker/autoload.php');
-$faker = Faker\Factory::create();
-// generate data by accessing properties
-echo $faker->name;
 ?>
