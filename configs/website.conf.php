@@ -11,6 +11,7 @@ define('WEBROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
 define('ROOT_DIR', dirname(__DIR__));
 define('VIEW', ROOT_DIR.'/app/views');
 define('LAYOUT', VIEW.'/layouts');
+define('ASSETS', WEBROOT.'/public');
 define('URLROOT', 'https://sbframework.test/');
 define('SITENAME', 'SBFRAMEWORK');
 define('APPVERSION', '1.0.0');
