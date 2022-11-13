@@ -6,6 +6,7 @@
  */
 
 require_once(__DIR__ . '/../configs/db.conf.php');
+
 class DB {   		
     private static $host, $db, $user, $password, $pdo, $instance, $status, $message;
 
@@ -63,9 +64,9 @@ class DB {
             DB::setPdo(new PDO(DB::getHost().';'.DB::getDb(), DB::getUser(), DB::getPassword())); 
             DB::getPdo()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
             DB::getPdo()->exec('set names utf8');
-            DB::setStatus("connecté");
+            DB::setStatus("connected");
         } catch(PDOException $e) {
-            DB::setStatus("non connecté");
+            DB::setStatus("not connected");
             DB::setMessage($e->getMessage());
             //die($e->getMessage());
         }
